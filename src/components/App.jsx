@@ -3,10 +3,12 @@ import Header from "./Header";
 import Note from "./Note";
 import Footer from "./Footer";
 import CreateArea from "./CreateArea";
+import default_notes from "../notes"
 
 function App() {
 
-    const [notes, setNotes] = useState([]);
+
+    const [notes, setNotes] = useState([...default_notes]);
 
     function addnote(newNote) {
         setNotes((prevItems) => {
